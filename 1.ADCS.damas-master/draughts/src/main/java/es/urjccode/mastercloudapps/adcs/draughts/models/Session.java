@@ -40,10 +40,11 @@ public class Session {
 		return this.game.getColor();
 	}
 */
+/*
 	public Color getColor(Coordinate coordinate) {
 		return this.game.getColor(coordinate);
 	}
-
+*/
 	public boolean isBlocked() {
 		return this.game.isBlocked();
 	}
