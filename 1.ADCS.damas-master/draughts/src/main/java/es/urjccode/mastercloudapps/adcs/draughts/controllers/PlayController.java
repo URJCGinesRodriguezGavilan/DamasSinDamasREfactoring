@@ -4,12 +4,18 @@ import es.urjccode.mastercloudapps.adcs.draughts.models.Color;
 import es.urjccode.mastercloudapps.adcs.draughts.models.Coordinate;
 import es.urjccode.mastercloudapps.adcs.draughts.models.Piece;
 import es.urjccode.mastercloudapps.adcs.draughts.models.Session;
+import es.urjccode.mastercloudapps.adcs.draughts.models.State;
 import es.urjccode.mastercloudapps.adcs.draughts.models.Error;
+import es.urjccode.mastercloudapps.adcs.draughts.models.Game;
 
 public class PlayController extends Controller {
 
     public PlayController(Session session) {
 		super(session);
+	}
+
+	public PlayController(Game game, State state) {
+        super(game, state);
 	}
 
 	public Error move(Coordinate origin, Coordinate target){
