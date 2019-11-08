@@ -35,10 +35,11 @@ public class Session {
 		return this.game.getPiece(coordinate);
 	}
 */
+/*
 	public Color getColor() {
 		return this.game.getColor();
 	}
-
+*/
 	public Color getColor(Coordinate coordinate) {
 		return this.game.getColor(coordinate);
 	}

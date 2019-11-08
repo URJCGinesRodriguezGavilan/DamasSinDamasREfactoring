@@ -25,7 +25,7 @@ public class PlayController extends Controller {
 	}
 
 	public Color getColor() {
-		return session.getColor();
+		return session.game.getColor();
 	}
 	
 	public boolean isBlocked() {
