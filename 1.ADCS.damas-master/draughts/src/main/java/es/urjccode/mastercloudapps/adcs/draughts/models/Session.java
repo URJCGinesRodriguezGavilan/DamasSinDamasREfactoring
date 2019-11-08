@@ -30,10 +30,11 @@ public class Session {
 		return this.game.move(origin, target);
 	}
 */
+/*
 	public Piece getPiece(Coordinate coordinate) {
 		return this.game.getPiece(coordinate);
 	}
-
+*/
 	public Color getColor() {
 		return this.game.getColor();
 	}

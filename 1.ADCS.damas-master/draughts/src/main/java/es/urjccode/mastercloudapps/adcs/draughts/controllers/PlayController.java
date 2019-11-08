@@ -21,7 +21,7 @@ public class PlayController extends Controller {
     }
 
 	public Piece getPiece(Coordinate coordinate) {
-		return session.getPiece(coordinate);
+		return session.game.getPiece(coordinate);
 	}
 
 	public Color getColor() {
