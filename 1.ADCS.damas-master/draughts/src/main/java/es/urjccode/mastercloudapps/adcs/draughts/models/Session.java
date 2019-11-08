@@ -15,10 +15,11 @@ public class Session {
 		return this.state.getValueState();
 	}
 */
+/*
 	public void next() {
 		this.state.next();
 	}
-
+*/
 	public void reset() {
 		this.state.reset();
 	}
