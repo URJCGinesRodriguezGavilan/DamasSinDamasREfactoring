@@ -19,7 +19,13 @@ public class PlayView extends SubView {
         do {
             String command = this.console.readString("Mueven las " + color + ": ");
             String[] numbers = command.split("\\n|\\.");
-            error = playController.move(new Coordinate(numbers[0]), new Coordinate(numbers[1]));
+            Coordinate origin = new Coordinate(numbers[0]);
+            Coordinate target = new Coordinate(numbers[1]);
+            if (!origin.isValid() || !target.isValid()) {
+                error =  Error.OUT_COORDINATE;
+            } else {
+                error = playController.move(origin, target);
+            }
             if (error != null){
                 console.writeln("Error!!!" + error.name());
                 gameView.write(playController);
