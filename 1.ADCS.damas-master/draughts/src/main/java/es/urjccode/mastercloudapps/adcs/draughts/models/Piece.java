@@ -20,4 +20,13 @@ public class Piece {
 		return difference<0;
 	}
 
+	public Error move(Coordinate origin, Coordinate target){
+		if (!this.isAdvanced(origin, target)) {
+			return Error.NOT_ADVANCED;
+		}
+		if (origin.diagonalDistance(target) >= 3) {
+			return Error.BAD_DISTANCE;
+		}
+		return null;
+	}
 }

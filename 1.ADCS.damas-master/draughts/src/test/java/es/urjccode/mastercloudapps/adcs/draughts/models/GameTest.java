@@ -43,7 +43,11 @@ public class GameTest {
         for (int i = 0; i < coordinates.length; i++) {
             assertNull(error);
             System.out.println(game);
+            System.out.print(i);
+            System.out.print(coordinates[i][0].getRow());
+            System.out.print(coordinates[i][1].getRow());
             error = game.move(coordinates[i][0], coordinates[i][1]);
+            System.out.println(error);
         }
         return error;
     }
@@ -130,13 +134,6 @@ public class GameTest {
     public void testGivenGameWhenEatEmptyPieceThenError() {
         assertEquals(Error.EATING_EMPTY, this.advance(new Coordinate[][] { 
             { new Coordinate(5, 4), new Coordinate(3, 2) },
-        })); 
-    }
-
-    @Test
-    public void testGivenGameWhenMoveBadDistanceThenError() {
-        assertEquals(Error.BAD_DISTANCE, this.advance(new Coordinate[][] { 
-            { new Coordinate(5, 0), new Coordinate(2, 3) },
         })); 
     }
 
